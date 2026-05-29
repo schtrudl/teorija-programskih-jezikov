@@ -1,0 +1,626 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="./" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Teorija programskih jezikov</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="_static/doctools.js?v=9a2dae69"></script>
+    <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="_static/copybutton.js?v=f281be69"></script>
+    <script src="_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>window.MathJax = {"tex": {"macros": {"intsym": ["\\underline{#1}", 1], "kwd": ["\\mathbf{#1}", 1], "kwdpre": ["\\kwd{#1}\\;", 1], "kwdmid": ["\\;\\kwd{#1}\\;", 1], "kwdpost": ["\\;\\kwd{#1}", 1], "true": "\\kwd{true}", "false": "\\kwd{false}", "ifthenelse": ["\\kwdpre{if} #1 \\kwdmid{then} #2 \\kwdmid{else} #3", 3], "whiledo": ["\\kwdpre{while} #1 \\kwdmid{do} #2", 2], "skip": "\\kwd{skip}", "fst": "\\kwdpre{fst}", "snd": "\\kwdpre{snd}", "inl": "\\kwdpre{inl}", "inr": "\\kwdpre{inr}", "match": "\\kwdpre{match}", "with": "\\kwdmid{with}", "matchsum": ["\\match #1 \\with \\inl #2 \\mapsto #3 \\; \\inr #4 \\mapsto #5", 5], "matchlist": ["\\match #1 \\with [] \\mapsto #2 \\; #3 :: #4 \\mapsto #5", 5], "ttt": "t\\!t", "fff": "f\\!\\!f", "infer": ["\\displaystyle{\\frac{#1}{#2}}", 2], "boolty": "\\kwd{bool}", "intty": "\\kwd{int}", "eqs": "\\mathcal{E}", "ctxt": "\\mathcal{C}", "itp": ["[\\![ #1 ]\\!]", 1], "return": "\\kwdpre{return}", "letin": ["\\kwdpre{let} #1 \\kwdmid{in}", 1], "bind": "\\mathop{>\\!\\!\\!>\\!\\!\\!=}", "just": "\\kwdpre{Just}", "nothing": "\\kwdpre{Nothing}"}}, "options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'zapiski';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="00-uvod.html">
+  
+  
+  
+  
+  
+  
+    <p class="title logo__title">Teorija programskih jezikov</p>
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="00-uvod.html">
+                    Teorija programskih jezikov
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Osnove</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="01-praksa-programskih-jezikov.html">Praksa programskih jezikov</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="01-praksa-programskih-jezikov-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="02-indukcija.html">Indukcija</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="02-indukcija-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Metateorija</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="03-metateorija-programskih-jezikov.html">Metateorija programskih jezikov</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="03-metateorija-programskih-jezikov-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="04-lambda-racun.html">λ-račun</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="04-lambda-racun-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="05-tipi.html">Tipi</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="05-tipi-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Denotacijska semantika</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="08-denotacijska-semantika.html">Denotacijska semantika</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="08-denotacijska-semantika-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="09-domene.html">Domene</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="09-domene-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Učinki</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="10-racunski-ucinki.html">Računski učinki</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="10-racunski-ucinki-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="11-monade.html">Monade</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="11-monade-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="12-algebrajski-ucinki.html">Algebrajski učinki</a></li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="13-prestrezniki-ucinkov.html">Prestrezniki učinkov</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="13-prestrezniki-ucinkov-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Dodatek</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="0A-izpeljava-tipov.html">Izpeljava tipov</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="0A-izpeljava-tipov-vaje.html">Vaje</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/zapiski.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="highlight-markdown notranslate"><div class="highlight"><pre><span></span><span class="gh"># Algebrajski učinki</span>
+
+<span class="gu">## Težave z monadami</span>
+
+Operacijska semantika še manjka, glavni razlog je:
+<span class="k">-</span><span class="w"> </span>obravnava specifičnih operacij (<span class="sb">`get`</span>, <span class="sb">`set`</span>, <span class="sb">`raise`</span>, <span class="sb">`try`</span>, <span class="sb">`choose`</span>)
+<span class="k">-</span><span class="w"> </span>težko se kombinirajo ($T_1 : \mathbf{Set} \to \mathbf{Set}$, $T_2 : \mathbf{Set} \to \mathbf{Set}$, toda $T_1 \circ T_2$ ni monada)
+
+$$\eta^{T_1 \circ T<span class="ge">_2}_</span>X : X \to T<span class="ge">_1(T_</span>2 X)$$
+
+$$\eta^{T_1 \circ T<span class="ge">_2}_</span>X(x) = \eta^{T_1}_{T_2 X}\bigl(\eta^{T_2}_X(x)\bigr)$$
+
+Z množenjem imamo težave. Lažje jih je videti pri $\mu<span class="ge">_X : TTX \to TX$: imamo $\mu^{T_</span>1}_{T_1 X} : T<span class="ge">_1(T_</span>1 X) \to T<span class="ge">_1 X$ in $\mu^{T_</span>2}_{T_2 X} : T<span class="ge">_2(T_</span>2 X) \to T<span class="ge">_2 X$, iz česar lahko dobimo $T_</span>1(T_1(T_2(T_2 X))) \to T<span class="ge">_1(T_</span>2 X)$, potrebujemo pa $T_1(T_2(T_1(T_2 X))) \to T<span class="ge">_1(T_</span>2 X)$.
+
+<span class="gu">## Signature in algebrajske teorije</span>
+
+<span class="gs">**Def.**</span> <span class="ge">*Signatura*</span> $\Sigma$ za algebrajsko teorijo je seznam operacij in njihovih členosti (= arity):
+$$\Sigma = \mathrm{op}_1 : n<span class="ge">_1, \dots, \mathrm{op}_</span>k : n_k$$
+
+<span class="gs">**Primer.**</span> $\Sigma_{\text{grupa}} = \{\underbrace{m : 2}_{\text{množenje}},\ \underbrace{i : 1}_{\text{inverz}},\ \underbrace{e : 0}_{\text{enota}}\}$
+
+Iz spremenljivk in operacij iz $\Sigma$ lahko sestavljamo izraze, npr. $m(i(x), m(m(y, e()), z))$.
+
+Formalno lahko to definiramo induktivno. Naj $\Gamma = x<span class="ge">_1, \dots, x_</span>n$. Sodbe oblike $\Gamma \vdash_\Sigma t$ uvedemo s pravili:
+
+$$\frac{x \in \Gamma}{\Gamma \vdash_\Sigma x} \qquad \frac{\mathrm{op} : n \in \Sigma \quad (\Gamma \vdash_\Sigma t<span class="ge">_i)_</span>{i=1}^n}{\Gamma \vdash_\Sigma \mathrm{op}(t_1, \dots, t_n)}$$
+
+<span class="gs">**Def.**</span> <span class="ge">*Algebrajska teorija*</span> nad signaturo $\Sigma$ je množica enačb med izrazi.
+
+<span class="gs">**Primer.**</span> Teorija za grupe:
+$$m(x, m(y, z)) = m(m(x, y), z)$$
+$$m(x, e()) = x$$
+$$m(e(), x) = x$$
+$$m(x, i(x)) = e()$$
+$$m(i(x), x) = e()$$
+
+<span class="gs">**Primer.**</span> Teorija za polmreže: $\Sigma = \{\vee : 2\}$,
+$$x \vee (y \vee z) = (x \vee y) \vee z$$
+$$x \vee y = y \vee x$$
+$$x \vee x = x$$
+
+<span class="gs">**Neprimer.**</span> Obsegi: ker imamo $0 \neq 1$ — algebrajska teorija ne dopušča neenačb.
+
+<span class="gu">## Interpretacije in modeli</span>
+
+<span class="gs">**Def.**</span> <span class="ge">*Interpretacija*</span> signature $\Sigma$ je množica $X$ skupaj s funkcijo $[\![\mathrm{op}_i]\!] : X^{n_i} \to X$ za vsak $\mathrm{op}_i \in \Sigma$.
+
+Če imamo interpretacijo, znamo interpretirati vsak izraz nad $\Sigma$.
+
+<span class="gs">**Def.**</span> <span class="ge">*Model*</span> algebrajske teorije je interpretacija njene signature, ki zadošča vsem enačbam.
+
+<span class="gs">**Primer.**</span> Vsaka grupa $G$ je model teorije za grupe.
+
+<span class="gs">**Trditev.**</span> Če sta $(X, [\![\mathrm{op}_i]\!]^X)$ in $(Y, [\![\mathrm{op}_i]\!]^Y)$ modela za dano teorijo, je model tudi
+$$\bigl(X \times Y,\ [\![\mathrm{op}_i]\!]^{X \times Y} : ((x_1, y<span class="ge">_1), \dots, (x_</span>n, y<span class="ge">_n)) \mapsto ([\![\mathrm{op}_</span>i]\!]^X(x_1, \dots, x<span class="ge">_n),\ [\![\mathrm{op}_</span>i]\!]^Y(y_1, \dots, y_n))\bigr)$$
+
+<span class="gs">**Posledica.**</span> Ne obstaja teorija za obsege.
+
+<span class="gs">**Def.**</span> <span class="ge">*Homomorfizem*</span> med modeloma $X$ in $Y$ je preslikava $h : X \to Y$, da velja
+$$h\bigl([\![\mathrm{op}]\!]^X(x_1, \dots, x<span class="ge">_n)\bigr) = [\![\mathrm{op}]\!]^Y(h(x_</span>1), \dots, h(x_n))$$
+
+<span class="gu">## Prosti modeli</span>
+
+<span class="gs">**Def.**</span> <span class="ge">*Absolutno prost model*</span> signature $\Sigma$ nad množico $X$ je množica $FX$, sestavljena iz vseh izrazov, ki jih dobimo iz elementov $X$ ter operacij, skupaj z interpretacijo
+$$[\![\mathrm{op}]\!]^{FX}(t_1, \dots, t<span class="ge">_n) = \mathrm{op}(t_</span>1, \dots, t_n)$$
+za vsak $\mathrm{op} : n \in \Sigma$.
+
+<span class="gs">**Primer.**</span> Absolutno prost model za signaturo grup nad $X = \{A, B\}$ vsebuje elemente
+$$A,\ B,\ e(),\ i(A),\ i(B),\ m(A, A),\ m(A, B),\ m(e(), A),\ \dots$$
+$$[\![i]\!]\bigl(i(m(A, B))\bigr) = i(i(m(A, B)))$$
+
+<span class="gs">**Def.**</span> <span class="ge">*Prost model*</span> $FX$ dobimo tako, da na absolutno prostem modelu podamo ekvivalenčno relacijo, porojeno z dano algebrajsko teorijo, in nato naredimo kvocient po njej.
+
+<span class="k">&gt; </span><span class="ge">Kvocient absolutno prostega modela.</span>
+
+<span class="gs">**Primer.**</span> Prost model za grupe nad $\{A, B\}$ izenači $[m(e(), A)] = [A]$, …
+
+<span class="k">-</span><span class="w"> </span>$F_{\text{polmreže}}\, X \cong \mathcal{P}_{\text{fin}}\, X \setminus \{\emptyset\}$ (končne podmnožice), kjer
+$$[A],\ [B],\ [C],\ \dots,\ [A \vee B],\ [A \vee C],\ \dots,\ [(A \vee B) \vee C],\ \dots$$
+<span class="k">-</span><span class="w"> </span>$\Sigma = \{\vee : 2,\ \bot : 0\}$, teorija za polmreže $+\ x \vee \bot = \bot \vee x = x$. Tedaj je $FX \cong \mathcal{P}_{\text{fin}}\, X$.
+<span class="k">-</span><span class="w"> </span>Če odstranimo komutativnost in idempotentnost za $\vee$, dobimo $FX \cong X^\ast$.
+
+<span class="gu">## Povezava z monadami</span>
+
+Vidimo, da je prost model za polmreže podoben delu monade za nedeterminizem. V resnici velja še več: vsak prost model porodi monado
+$$(F,\ \eta_X = x \mapsto [x],\ \mathbin{&gt;\!\!&gt;\!\!=}_{X,Y})$$
+kjer
+$$\eta_X : X \to FX,\quad x \mapsto [x]$$
+$$\mathbin{&gt;\!\!&gt;\!\!=}_{X,Y} : FX \to (X \to FY) \to FY$$
+$$[x] \mathbin{&gt;\!\!&gt;\!\!=} f = f\,x \qquad \text{(DN: preveri, da je dobro definirano)}$$
+$$[\mathrm{op}(t_1, \dots, t<span class="ge">_n)] \mathbin{&gt;\!\!&gt;\!\!=} f = [\![\mathrm{op}]\!]^{FY}([t_</span>1] \mathbin{&gt;\!\!&gt;\!\!=} f, \dots)$$
+
+<span class="k">&gt; </span><span class="ge">DN: Preveri, da zadošča lastnostim monade.</span>
+
+Elemente absolutno prostega modela lahko vidimo kot sledi izvajanja.
+
+<span class="gs">**Primer.**</span> $\Sigma = \{\vee : 2,\ \bot : 0\}$. Tedaj bi lahko program
+</pre></div>
+</div>
+<p>x ← ret 1  ∨  ret 2
+y ← ret 10 ∨ ret 20
+ret (x + y)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+<span class="n">predstavili</span> <span class="n">z</span> <span class="n">drevesom</span><span class="p">:</span>
+
+</pre></div>
+</div>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>        ∨
+   ╱       ╲
+ x=1        x=2
+╱   ╲      ╱   ╲
+</pre></div>
+</div>
+<p>y=10  y=20  y=10  y=20
+(11) (21)  (12)  (22)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>
+oz. z izrazom $(11 \vee 21) \vee (12 \vee 22)$.
+
+$$F_{\text{state}}\, X \cong S \to S \times X$$
+</pre></div>
+</div>
+<p>Nekaj nejasnosti pri prepisu:</p>
+<ul class="simple">
+<li><p>Na koncu strani 1 sem zapis “Aldar” pod podčrtanim primerom izpustil — videti je kot naključen zapis ali oznaka, ne del besedila.</p></li>
+<li><p>Drevesni diagram sem narisal po smislu; tvoja skica je razvejana drugače in jo je morda treba popraviti.</p></li>
+<li><p><span class="math notranslate nohighlight">\(F_{\text{state}}\)</span> je na koncu strani 2 omenjen brez konteksta — domnevam, da je to napoved naslednje teme.</p></li>
+</ul>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Matija Pretnar
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
